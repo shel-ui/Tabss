@@ -43,7 +43,7 @@
     </style>
     <div id="bg1">
         <span class="buttons1234">
-            <button id="btn1">Cats</button>
+            <button id="btn1" class="active">Cats</button>
             <button id="btn2">Dogs</button>
             <button id="btn3">Birds</button>
             <button id="btn4">Amphibians</button>
@@ -63,6 +63,13 @@
         const paraBottom = document.querySelector('.def-Two');
         const paraCenter = document.querySelector('.def-Inside');
         
+        window.onload = function() {
+                    paraTop.textContent = "The cat (Felis catus), also referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal.";
+                    paraCenter.textContent = "Domestic cats may be called \"house cats\" when kept as indoor pets. They are one of the most popular pets in the world.";
+                    paraBottom.textContent = "Cat intelligence is evident in their ability to adapt, learn through observation, and solve problems. Research has shown they possess strong memories, exhibit neuroplasticity, and display cognitive skills comparable to those of a young child. Cat communication includes meowing, purring, trilling, hissing, growling, grunting, and body language. It can hear sounds too faint or too high in frequency for human ears, such as those made by small mammals. It secretes and perceives pheromones.";
+                };
+
+
         function button1() {
                 paraTop.textContent = "The cat (Felis catus), also referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal.";
                 paraCenter.textContent = "Domestic cats may be called \"house cats\" when kept as indoor pets. They are one of the most popular pets in the world.";
@@ -70,25 +77,6 @@
         }
 
         function button2() {
-                // if (paraTop.textContent) {
-                //     // console.log('textContent detected');
-                //     paraTop.textContent = str;
-                //     let getText = paraTop.textContent;
-                //     let amountT = paraTop.textContent.length;
-                //     for (let index = 0; index < amountT; index++) {
-                //         const str = getText.slice(0, 0) + getText.slice(0, amountT);
-                //         paraTop.textContent += str;
-                        
-                //     }
-                //     //paraTop.textContent.replace(paraTop.length, "TEsting");
-                //    //paraTop.textContent = "The dog (Canis familiaris or Canis lupus familiaris) is a domesticated descendant of the gray wolf.";
-                
-                // } else {
-                //     console.log('Paragraph 1 doesn\'t exist, text is not removed.');
-                // }
-                // I gave up. I used chatGPT. after a long process of figuring things out on my own from morning until 6 pm...
-                // all of the codes above were unnecessary, says chatGPT. LMAO
-
                 paraTop.textContent = "The dog (Canis familiaris or Canis lupus familiaris) is a domesticated descendant of the gray wolf.";
                 paraBottom.textContent = "Dogs have been bred for desired behaviors, sensory capabilities, and physical attributes. Dog breeds vary widely in shape, size, and color. They have the same number of bones (with the exception of the tail), powerful jaws that house around 42 teeth, and well-developed senses of smell, hearing, and sight. Compared to humans, dogs possess a superior sense of smell and hearing, but inferior visual acuity.";
                 paraCenter.textContent = "Dogs are mammals, usually to be kept as pets, or work on farms or for the police. Some dogs are trained to be rescue dogs and join teams such as mountain rescue.";
