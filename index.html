@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Jua', sans-serif;
+        }
+
+        #bg1 {
+            background-color: white;
+            border-radius: 15px;
+            border: 3px solid rgb(51, 51, 51);
+            padding: 50px;
+            height: 50%;
+            width: 50%;
+        }
+
+        #btn1, #btn2, #btn3, #btn4 {
+            font-family: 'Jua', sans-serif;
+            border: none;
+            background-color: white;
+            font-size: 23px;
+            margin-left: 20px;
+            color: gray;
+        }
+        
+        #btn1:focus, #btn2:focus, #btn3:focus, #btn4:focus {
+            border-bottom: 3px solid black;
+            color: black;
+        }
+    </style>
+    <div id="bg1">
+        <span class="buttons1234">
+            <button id="btn1">Cats</button>
+            <button id="btn2">Dogs</button>
+            <button id="btn3">Birds</button>
+            <button id="btn4">Amphibians</button>
+        </span>
+        <p class="def-One"></p>
+        <div id="bg2">
+            <p class="def-Inside"></p>
+        </div>
+        <p class="def-Two"></p>
+    </div>
+    <script>
+        const firstButton = document.getElementById('btn1').addEventListener('click', button1);
+        const secondButton = document.getElementById('btn2').addEventListener('click', button2);
+        const thirdButton = document.getElementById('btn3').addEventListener('click', button3);
+        const fourthButton = document.getElementById('btn4').addEventListener('click', button4);
+        const paraTop = document.querySelector('.def-One');
+        const paraBottom = document.querySelector('.def-Two');
+        const paraCenter = document.querySelector('.def-Inside');
+        
+        function button1() {
+                paraTop.textContent = "The cat (Felis catus), also referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal.";
+                paraCenter.textContent = "Domestic cats may be called \"house cats\" when kept as indoor pets. They are one of the most popular pets in the world.";
+                paraBottom.textContent = "Cat intelligence is evident in their ability to adapt, learn through observation, and solve problems. Research has shown they possess strong memories, exhibit neuroplasticity, and display cognitive skills comparable to those of a young child. Cat communication includes meowing, purring, trilling, hissing, growling, grunting, and body language. It can hear sounds too faint or too high in frequency for human ears, such as those made by small mammals. It secretes and perceives pheromones.";
+        }
+
+        function button2() {
+                // if (paraTop.textContent) {
+                //     // console.log('textContent detected');
+                //     paraTop.textContent = str;
+                //     let getText = paraTop.textContent;
+                //     let amountT = paraTop.textContent.length;
+                //     for (let index = 0; index < amountT; index++) {
+                //         const str = getText.slice(0, 0) + getText.slice(0, amountT);
+                //         paraTop.textContent += str;
+                        
+                //     }
+                //     //paraTop.textContent.replace(paraTop.length, "TEsting");
+                //    //paraTop.textContent = "The dog (Canis familiaris or Canis lupus familiaris) is a domesticated descendant of the gray wolf.";
+                
+                // } else {
+                //     console.log('Paragraph 1 doesn\'t exist, text is not removed.');
+                // }
+                // I gave up. I used chatGPT. after a long process of figuring things out on my own from morning until 6 pm...
+                // all of the codes above were unnecessary, says chatGPT. LMAO
+
+                paraTop.textContent = "The dog (Canis familiaris or Canis lupus familiaris) is a domesticated descendant of the gray wolf.";
+                paraBottom.textContent = "Dogs have been bred for desired behaviors, sensory capabilities, and physical attributes. Dog breeds vary widely in shape, size, and color. They have the same number of bones (with the exception of the tail), powerful jaws that house around 42 teeth, and well-developed senses of smell, hearing, and sight. Compared to humans, dogs possess a superior sense of smell and hearing, but inferior visual acuity.";
+                paraCenter.textContent = "Dogs are mammals, usually to be kept as pets, or work on farms or for the police. Some dogs are trained to be rescue dogs and join teams such as mountain rescue.";
+        }
+
+        function button3() {
+                paraTop.textContent = "Birds are a group of warm-blooded vertebrates constituting the class Aves, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.";
+                paraCenter.textContent = "Birds live all over the world. They range in size from the 5 cm (2 in) bee hummingbird to the 2.70 m (9 ft) ostrich. There are about ten thousand species of birds. More than half of these are passerines, or perching birds.";
+                paraBottom.textContent = "Wings evolved from the forelimbs of birds. They give birds the ability to fly. Over time, many groups of birds evolved with smaller wings. These include ratites, penguins and many island species of birds.";
+        }
+
+        function button4() {
+                paraTop.textContent = "Amphibians are members of the class Amphibia. The living ones are frogs (including toads), salamanders (including newts) and caecilians. They are four-legged vertebrates which are cold blooded.";
+                paraCenter.textContent = "They could also use their strong fins to hoist themselves out of the water and onto dry land if necessary.";
+                paraBottom.textContent = "Amphibians lay their eggs in water, usually in a foam nest. After hatching they are tadpoles, which live in the water and have gills. The tadpoles change into adults in a process called metamorphosis. When they are adult, they have lungs to breathe instead of gills, and legs. Adult amphibians also use their skin to take in oxygen, and some species of salamanders do not have lungs.";
+        }
+    </script>
+</body>
+</html>
