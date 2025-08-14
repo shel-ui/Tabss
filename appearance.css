@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Jua', sans-serif;
+}
+#bg1 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 3px solid rgb(51, 51, 51);
+    padding: 50px;
+    height: 50vh;
+    width: 50%;
+}
+#btn1, #btn2, #btn3, #btn4 {
+    font-family: 'Jua', sans-serif;
+    border: none;
+    background-color: white;
+    font-size: 23px;
+    margin-left: 20px;
+    color: gray;
+}
+#btn1:focus, #btn2:focus, #btn3:focus, #btn4:focus {
+    border-bottom: 3px solid black;
+    color: black;
+} 
+@media only screen and (max-width: 1524px ) {
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    #bg1 {
+        overflow: scroll;
+    }
+}
