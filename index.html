@@ -19,11 +19,11 @@
         }
 
         #bg1 {
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             border-radius: 15px;
             border: 3px solid rgb(51, 51, 51);
             padding: 50px;
-            height: 50%;
+            height: 50vh;
             width: 50%;
         }
 
@@ -40,6 +40,17 @@
             border-bottom: 3px solid black;
             color: black;
         }
+            
+        @media only screen and (max-width: 1524px ) {
+            body {
+                height: 100vh;
+                width: 100vw;
+            }
+            
+            #bg1 {
+                overflow: scroll;
+            }
+        }
     </style>
     <div id="bg1">
         <span class="buttons1234">
@@ -48,12 +59,13 @@
             <button id="btn3">Birds</button>
             <button id="btn4">Amphibians</button>
         </span>
-        <p class="def-One"></p>
+            <p class="def-One"></p>
         <div id="bg2">
             <p class="def-Inside"></p>
         </div>
         <p class="def-Two"></p>
     </div>
+
     <script>
         const firstButton = document.getElementById('btn1').addEventListener('click', button1);
         const secondButton = document.getElementById('btn2').addEventListener('click', button2);
@@ -62,13 +74,12 @@
         const paraTop = document.querySelector('.def-One');
         const paraBottom = document.querySelector('.def-Two');
         const paraCenter = document.querySelector('.def-Inside');
-        
+
         window.onload = function() {
                     paraTop.textContent = "The cat (Felis catus), also referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal.";
                     paraCenter.textContent = "Domestic cats may be called \"house cats\" when kept as indoor pets. They are one of the most popular pets in the world.";
                     paraBottom.textContent = "Cat intelligence is evident in their ability to adapt, learn through observation, and solve problems. Research has shown they possess strong memories, exhibit neuroplasticity, and display cognitive skills comparable to those of a young child. Cat communication includes meowing, purring, trilling, hissing, growling, grunting, and body language. It can hear sounds too faint or too high in frequency for human ears, such as those made by small mammals. It secretes and perceives pheromones.";
                 };
-
 
         function button1() {
                 paraTop.textContent = "The cat (Felis catus), also referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal.";
